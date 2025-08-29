@@ -5,7 +5,9 @@
   --azul-electrico: #3B82F6;
   --blanco-humo: #E0E0E0;
 
-  --font-primary: 'Roboto Slab', Arsenica Antiqua Bold, Codec Pro;
+   /* Fuentes principales */
+  --font-primary: 'Arsenica Antiqua Bold', 'Roboto Slab', 'Codec Pro', serif;
+  --font-secondary: 'Roboto Slab', 'Codec Pro', 'Arsenica Antiqua Bold', sans-serif;
   --transition-fast: 0.3s ease-in-out;
 }
 
@@ -19,4 +21,36 @@ html, body {
   scroll-behavior: smooth;
 }
 
+/* Estilos comunes para secciones */
+.section {
+    padding: 8rem 8%;
+    position: relative;
+    background-color: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(1px);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-right: 2rem;
+    white-space: nowrap;
+}
+
+.section-number {
+    color: var(--azul-electrico);
+    margin-right: 1rem;
+    font-size: 2rem;
+}
+
+.section-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--azul-electrico), var(--grafito-oscuro));
+    opacity: 0.5;
+}
 
