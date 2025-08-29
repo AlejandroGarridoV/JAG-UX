@@ -1,0 +1,246 @@
+/* Asegúrate que el contenido esté por encima del fondo */
+.header-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mantén el resto de tus estilos existentes */
+.aztec-header {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* Contenedor principal */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Sección del logo */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Efecto decorativo para el logo */
+.logo-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 1px solid var(--azul-electrico);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.logo-wrapper:hover::after {
+  opacity: 0.3;
+}
+
+/* Texto del nombre y título */
+.text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-logo {
+  font-family: 'Arsenica Antiqua Bold', serif;
+  color: var(--blanco-humo);
+  font-size: 1.8rem;
+  margin: 0;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.name-logo::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,
+      var(--azul-electrico),
+      var(--verde-fluorescente),
+      transparent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--transition-fast);
+}
+
+.name-logo:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.title {
+  font-family: 'Codec Pro', sans-serif;
+  color: var(--azul-electrico);
+  font-size: 0.9rem;
+  margin: 0.2rem 0 0 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Navegación */
+.nav-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-line {
+  height: 1px;
+  width: 40px;
+  background: linear-gradient(90deg,
+      transparent,
+      var(--azul-electrico),
+      transparent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-family: 'Codec Pro', sans-serif;
+  color: var(--blanco-humo);
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--verde-fluorescente);
+  width: 0;
+  overflow: hidden;
+  transition: width var(--transition-fast);
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+/* Efecto de glitch al hacer hover */
+.nav-link:hover {
+  animation: glitch 0.5s linear infinite;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Versión responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .logo-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-section {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-line {
+    display: none;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .name-logo {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    font-size: 0.8rem;
+  }
+}
+
+/* Para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .aztec-header {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}

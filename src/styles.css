@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --negro-profundo: #0A0A0A;
+  --grafito-oscuro: #1A1A1D;
+  --verde-fluorescente: #05F26C;
+  --azul-electrico: #3B82F6;
+  --blanco-humo: #E0E0E0;
+
+  --font-primary: 'Roboto Slab', Arsenica Antiqua Bold, Codec Pro;
+  --transition-fast: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+
