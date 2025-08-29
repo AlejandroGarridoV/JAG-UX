@@ -1,12 +1,13 @@
 import { Component, OnInit, HostListener, AfterViewInit, OnDestroy } from '@angular/core';
 import * as AOS from 'aos';
 import { ProyectosCompComponent } from "../../componentes/proyectos-comp/proyectos-comp.component";
+import { AcercaCompComponent } from "../../componentes/acerca-comp/acerca-comp.component";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  imports: [ProyectosCompComponent]
+  imports: [ProyectosCompComponent, AcercaCompComponent]
 })
 export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 

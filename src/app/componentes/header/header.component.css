@@ -48,24 +48,22 @@
 }
 
 .logo {
-  width: 80px;
+  width: 100px;
   height: auto;
+  background: black;
+  border-radius: 50%;
   object-fit: contain;
   transition: transform var(--transition-fast), filter var(--transition-fast);
-}
-
-.logo:hover {
-  transform: scale(1.05);
 }
 
 /* Efecto decorativo para el logo */
 .logo-wrapper::after {
   content: "";
   position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
   border: 1px solid var(--azul-electrico);
   border-radius: 50%;
   opacity: 0;
@@ -83,7 +81,7 @@
 }
 
 .name-logo {
-  font-family: 'Arsenica Antiqua Bold', serif;
+  font-family: var(--font-primary);
   color: var(--blanco-humo);
   font-size: 1.8rem;
   margin: 0;
@@ -95,7 +93,7 @@
 .name-logo::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -25px;
   left: 0;
   width: 100%;
   height: 2px;
@@ -157,6 +155,73 @@
   transition: color var(--transition-fast);
 }
 
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--blanco-humo);
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 0.5rem 0.8rem;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.nav-link::before {
+  content: ">";
+  margin-right: 5px;
+  color: var(--verde-fluorescente);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--verde-fluorescente);
+  border: 1px solid var(--azul-electrico);
+  box-shadow: 0 0 10px var(--azul-electrico);
+  background-color: rgba(0, 162, 255, 0.1);
+  animation: glitch 0.3s linear;
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0)
+  }
+
+  20% {
+    transform: translate(-2px, 2px)
+  }
+
+  40% {
+    transform: translate(-2px, -2px)
+  }
+
+  60% {
+    transform: translate(2px, 2px)
+  }
+
+  80% {
+    transform: translate(2px, -2px)
+  }
+
+  100% {
+    transform: translate(0)
+  }
+}
 
 
 /* Versión responsive */
