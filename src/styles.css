@@ -23,7 +23,7 @@ html, body {
 
 /* Estilos comunes para secciones */
 .section {
-    padding: 8rem 8%;
+    padding: 6rem 8%;
     position: relative;
     background-color: rgba(10, 10, 10, 0.85);
     backdrop-filter: blur(1px);

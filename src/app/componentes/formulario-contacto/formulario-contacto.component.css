@@ -1,0 +1,156 @@
+/* Contact Section Layout */
+.contact-content {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-heading {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--azul-electrico);
+}
+
+.contact-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--blanco-humo);
+}
+
+/* Contact Links */
+.contact-methods {
+  margin: 1.5rem 0;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--blanco-humo);
+  margin-bottom: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--azul-electrico);
+}
+
+/* Contact Form */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--blanco-humo);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: transparent;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 4px;
+  color: var(--blanco-humo);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--azul-electrico);
+  background-color: rgba(255, 255, 255, 0.05);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  background-color: var(--azul-electrico);
+  color: var(--blanco-humo);
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--verde-fluorescente);
+  color: var(--negro-profundo);
+  transform: translateY(-2px);
+}
+
+/* Email Card Styling */
+.email-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.03);
+  max-width: 100%;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.email-card:hover {
+  border-color: var(--azul-electrico);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.email-card .icon-email {
+  font-size: 1.5rem;
+  color: var(--azul-electrico);
+}
+
+.email-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-label {
+  font-size: 0.85rem;
+  color: var(--blanco-humo);
+  opacity: 0.7;
+  margin-bottom: 0.2rem;
+}
+
+.email-link {
+  color: var(--blanco-humo);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: var(--azul-electrico);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}

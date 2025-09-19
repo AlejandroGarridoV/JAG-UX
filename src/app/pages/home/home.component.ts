@@ -2,12 +2,13 @@ import { Component, OnInit, HostListener, AfterViewInit, OnDestroy } from '@angu
 import * as AOS from 'aos';
 import { ProyectosCompComponent } from "../../componentes/proyectos-comp/proyectos-comp.component";
 import { AcercaCompComponent } from "../../componentes/acerca-comp/acerca-comp.component";
+import { FormularioContactoComponent } from "../../componentes/formulario-contacto/formulario-contacto.component";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  imports: [ProyectosCompComponent, AcercaCompComponent]
+  imports: [ProyectosCompComponent, AcercaCompComponent, FormularioContactoComponent]
 })
 export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 

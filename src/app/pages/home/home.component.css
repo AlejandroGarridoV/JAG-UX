@@ -134,90 +134,7 @@
 }
 
 
-/* Sección Contacto */
-.contact-content {
-    display: flex;
-    gap: 5rem;
-}
 
-.contact-info {
-    flex: 1;
-}
-
-.contact-methods {
-    margin: 2rem 0;
-}
-
-.contact-link {
-    display: block;
-    color: var(--blanco-humo);
-    margin-bottom: 1rem;
-    text-decoration: none;
-    transition: var(--transition-fast);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.contact-link:hover {
-    color: var(--azul-electrico);
-}
-
-.social-links {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
-.social-icon {
-    color: var(--blanco-humo);
-    font-size: 1.5rem;
-    transition: var(--transition-fast);
-}
-
-.social-icon:hover {
-    color: var(--azul-electrico);
-    transform: translateY(-3px);
-}
-
-.contact-form {
-    flex: 1;
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--grafito-oscuro);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 4px;
-    color: var(--blanco-humo);
-    font-family: var(--font-primary);
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.submit-button {
-    background-color: var(--azul-electrico);
-    color: var(--blanco-humo);
-    border: none;
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: var(--transition-fast);
-}
-
-.submit-button:hover {
-    background-color: var(--verde-fluorescente);
-    color: var(--negro-profundo);
-}
 
 /* Botón Volver Arriba */
 .back-to-top {
@@ -305,8 +222,7 @@
 
 @media (max-width: 992px) {
 
-    .about-content,
-    .contact-content {
+    .about-content{
         flex-direction: column;
         gap: 3rem;
     }
